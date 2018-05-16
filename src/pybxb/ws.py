@@ -1,7 +1,9 @@
 import types
 import json
 from pprint import pprint as pp
+from urllib.parse import parse_qsl
 from aiohttp import web
+from multidict import MultiDict, MultiDictProxy
 from aiohttp.web import Request, Response
 
 
@@ -13,10 +15,12 @@ def route(this, verb='GET', path='/'):
         def w(req: Request) -> Response:
             assert req.__class__ is Request
             bxb_version = req.headers.get('X-BXB-Version') or 'null'
-            encoding = req.charset or 'utf-8'
-            content_type = req.content_type
-
-            r = fn(req)
+            charset = req.charset or 'utf-8'
+            content_type = req.content_type or 'application/octet-stream'
+            try:
+                r = fn(req)
+            except Exception as ex:
+                raise ex
             return r
         this.router.add_route(verb, path, w)
         return w
@@ -36,9 +40,24 @@ async def index(req: Request):
 
 @httpd.route(verb='POST', path='/')
 async def io(req: Request):
-    # bytes_body = await req.read()
-    print(await req.post())
-    print(req.query)
+    if req.content_type == 'application/x-www-form-urlencoded':
+        charset = req.charset or 'utf-8'
+        out = MultiDict(req.query)
+
+        bytes_body = await req.read()
+        if bytes_body:
+            out.extend(parse_qsl(bytes_body.rstrip().decode(charset),
+                                 keep_blank_values=True,
+                                 encoding=charset))
+
+        # Make immutable dict with auth[param] keys like auth_param
+        res = MultiDictProxy(MultiDict((
+                  k.startswith('auth[') and k.endswith(']') and
+                  'auth_' + k[5:-1]
+                  or k,
+                  v,) for k, v in out.items()))
+
+        print('\n'.join('{}: {}'.format(k, v) for k, v in res.items()))
 
     return Response(status=200, text='OK')
 
