@@ -1,0 +1,191 @@
+------------------------
+2018.05.16 10:59:18
+ImBot Event Query
+Array
+(
+    [event] => ONAPPINSTALL
+    [data] => Array
+        (
+            [VERSION] => 1
+            [LANGUAGE_ID] => ru
+        )
+
+    [ts] => 1526457557
+    [auth] => Array
+        (
+            [access_token] => XXXX
+            [expires] => 1526461157
+            [expires_in] => 3600
+            [scope] => task,crm,imbot,disk,imopenlines,im
+            [domain] => vkapuste.bitrix24.ru
+            [server_endpoint] => https://oauth.bitrix.info/rest/
+            [status] => L
+            [client_endpoint] => https://vkapuste.bitrix24.ru/rest/
+            [member_id] => ffebdda6896518c4ec15c5b0277101bb
+            [user_id] => 21
+            [refresh_token] => ZZZZZZZZ
+            [application_token] => YYY
+        )
+
+)
+
+------------------------
+
+------------------------
+2018.05.16 10:59:18
+ImBot send data
+Array
+(
+    [URL] => https://vkapuste.bitrix24.ru/rest/imbot.register
+    [PARAMS] => Array
+        (
+            [CODE] => echobot
+            [TYPE] => B
+            [EVENT_MESSAGE_ADD] => https://vkapuste.sale/bot/bot.php
+            [EVENT_WELCOME_MESSAGE] => https://vkapuste.sale/bot/bot.php
+            [EVENT_BOT_DELETE] => https://vkapuste.sale/bot/bot.php
+            [OPENLINE] => Y
+            [PROPERTIES] => Array
+                (
+                    [NAME] => EchoBot 7
+                    [COLOR] => GREEN
+                    [EMAIL] => test@test.ru
+                    [PERSONAL_BIRTHDAY] => 2016-03-11
+                    [WORK_POSITION] => My first echo bot
+                    [PERSONAL_WWW] => http://bitrix24.com
+                    [PERSONAL_GENDER] => M
+                    [PERSONAL_PHOTO] => iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3BpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxMmZhMjNhZC0zYWUzLTQ2NDEtYWJmZi0wYmQ2ZWIxMzU1NTIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjExQzE0N0FEOTQxMTFFNUI0QTNDQjAzMzUzRUU5NzMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjExQzE0NzlEOTQxMTFFNUI0QTNDQjAzMzUzRUU5NzMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAyODAxMTc0MDcyMDY4MTE4RjYyRjMyN0EwQjYwQzQzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjEyZmEyM2FkLTNhZTMtNDY0MS1hYmZmLTBiZDZlYjEzNTU1MiIvPiA8L3Jk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
+                )
+
+            [auth] => XXXX
+        )
+
+)
+
+------------------------
+
+------------------------
+2018.05.16 10:59:19
+ImBot send data
+Array
+(
+    [URL] => https://vkapuste.bitrix24.ru/rest/imbot.command.register
+    [PARAMS] => Array
+        (
+            [BOT_ID] => 57
+            [COMMAND] => echo
+            [COMMON] => Y
+            [HIDDEN] => N
+            [EXTRANET_SUPPORT] => N
+            [LANG] => Array
+                (
+                    [0] => Array
+                        (
+                            [LANGUAGE_ID] => en
+                            [TITLE] => Get echo message
+                            [PARAMS] => some text
+                        )
+
+                )
+
+            [EVENT_COMMAND_ADD] => https://vkapuste.sale/bot/bot.php
+            [auth] => XXXX
+        )
+
+)
+
+------------------------
+
+------------------------
+2018.05.16 10:59:19
+ImBot send data
+Array
+(
+    [URL] => https://vkapuste.bitrix24.ru/rest/imbot.command.register
+    [PARAMS] => Array
+        (
+            [BOT_ID] => 57
+            [COMMAND] => echoList
+            [COMMON] => N
+            [HIDDEN] => N
+            [EXTRANET_SUPPORT] => N
+            [LANG] => Array
+                (
+                    [0] => Array
+                        (
+                            [LANGUAGE_ID] => en
+                            [TITLE] => Get list of colors
+                            [PARAMS] =>
+                        )
+
+                )
+
+            [EVENT_COMMAND_ADD] => https://vkapuste.sale/bot/bot.php
+            [auth] => XXXX
+        )
+
+)
+
+------------------------
+
+------------------------
+2018.05.16 10:59:19
+ImBot send data
+Array
+(
+    [URL] => https://vkapuste.bitrix24.ru/rest/imbot.command.register
+    [PARAMS] => Array
+        (
+            [BOT_ID] => 57
+            [COMMAND] => help
+            [COMMON] => N
+            [HIDDEN] => N
+            [EXTRANET_SUPPORT] => N
+            [LANG] => Array
+                (
+                    [0] => Array
+                        (
+                            [LANGUAGE_ID] => en
+                            [TITLE] => Get help message
+                            [PARAMS] => some text
+                        )
+
+                )
+
+            [EVENT_COMMAND_ADD] => https://vkapuste.sale/bot/bot.php
+            [auth] => XXXX
+        )
+
+)
+
+------------------------
+
+------------------------
+2018.05.16 10:59:20
+ImBot send data
+Array
+(
+    [URL] => https://vkapuste.bitrix24.ru/rest/event.bind
+    [PARAMS] => Array
+        (
+            [EVENT] => OnAppUpdate
+            [HANDLER] => https://vkapuste.sale/bot/bot.php
+            [auth] => XXXX
+        )
+
+)
+
+------------------------
+
+------------------------
+2018.05.16 10:59:20
+ImBot register
+Array
+(
+    [0] => 57
+    [1] => 21
+    [2] => 25
+    [3] => 23
+)
+
+------------------------
